@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Simple Google Maps API integration </title>
+<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/bradley-gratis" type="text/css"/> <!--adding the font--> 
+<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/yahfie" type="text/css"/>
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+<script>
+function initialize() {
+  var mapProp = {
+    center:new google.maps.LatLng(34.0224,-118.2851),
+    zoom:10,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+<style> 
+body {
+  font-family: 'YahfieHeavy';
+}
+</style>
+</head>
+
+<body>
+<center> 	
+	<h1> Use the Google API Map that has been integrated to find where you live! </h1>
+	<div id="information"> 
+		I currently attend USC, so I have put the map centered at USC! <br>
+		If you click on the + button to zoom in, you can see that it zooms in closer to USC. 
+	</div> 
+	<br>
+	<br>
+	<div id="googleMap" style="width:500px;height:380px;"></div>
+</center>
+</body>
+
+</html>
